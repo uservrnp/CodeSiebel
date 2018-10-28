@@ -1,0 +1,34 @@
+load data
+ characterset WE8MSWIN1252
+ infile '/var/data/sbl/entrada/dwh-info-cliente-dia.txt'
+ truncate
+ into table EXTERNO.X_IB_PCL_CLIENTE
+ (  CODIGOUNICO        position (001:010) CHAR(10),
+    RAZONSOCIAL        position (011:050) CHAR(40),
+    ACTIVIDADECONOMICA position (051:090) CHAR(40),
+    CIIU               position (091:094) CHAR(4),
+    GRUPOECONOMICO     position (095:098) CHAR(4),
+    COLOCACIONIBK      position (099:113) CHAR(15),
+    INDIRECTOSIBK      position (114:128) CHAR(15),
+    DEPOSITOSGESTION   position (129:143) CHAR(15),
+    DEPOSITOSMESA      position (144:158) CHAR(15),
+    RATINGEMPRESA      position (159:163) CHAR(5),
+    RATINGOPERACION    position (164:168) CHAR(5),
+    CALIFICACIONSBS    position (169:169) CHAR(1),
+    CALIFICACIONIBK    position (170:170) CHAR(1),
+    FECHAINGRESO       position (171:178) CHAR(8),
+    GARANTIAS          position (179:193) CHAR(15),
+    RUC                position (194:204) CHAR(11),
+    ASIGNADOSECTORISTA position (205:213) CHAR(9),
+    BANCA              position (214:228) CHAR(15),
+    ZONAL              position (229:234) CHAR(6),
+    DIRECCION          position (235:434) CHAR(200),
+    DISTRITO           position (435:436) CHAR(2),
+    PROVINCIA          position (437:438) CHAR(2),
+    DEPARTAMENTO       position (439:440) CHAR(2),
+    NOMBRECOMERCIAL    position (441:465) CHAR(25),
+    FEVE               position (466:477) CHAR(12),
+    SEGMENTO           position (478:479) CHAR(2),
+    FILLER             position (480:542) CHAR(63),
+    FECHAPROCESO       position (543:550) CHAR(8)
+ )

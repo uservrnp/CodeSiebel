@@ -1,0 +1,1 @@
+echo "\$getasciidwh dw-agc-cliep.txt /var/data/sbl/entrada/dw-agc-cliep.txt" | ftp -i 130.30.2.86
